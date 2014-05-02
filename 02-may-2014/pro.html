@@ -1,0 +1,147 @@
+<html>
+<head><title>my first program</title>
+<script type="text/javascript">
+function validateForm()
+{
+//alert("hiiiiiiiiii");
+var x=document.forms["myForm"]["txtName"].value;
+if (x==null || x=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+
+var y=document.forms["myForm"]["add"].value;
+if (y==null || y=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+
+var z=document.forms["myForm"]["city"].value;
+if (z==null || z=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+
+var a=document.forms["myForm"]["email"].value;
+if (a==null || a=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+var formsCollection = document.getElementById("fid");
+for(var i=0;i<formsCollection.length;i++)
+{
+document.getElementById("a").value+="\n"+i
+}
+
+
+}
+
+
+
+
+
+
+
+/*function validateForm112(){
+//alert("hiiiiiiiiiii");
+
+var Name=document.getElementById("txtName");
+var errname=document.getElementById("errname");
+errname.innerHTML="";
+if(Name.value=="")
+{
+alert("Name not be empty");
+errname.innerHTML="Name not be empty";	
+}
+else
+{
+document.getElementById("a").value+="\n Name:"+Name.value
+}
+var City=document.getElementById("city");
+var errcity=document.getElementById("errcity");
+errcity.innerHTML="";
+if(City.value=="")
+{
+//alert("City not be empty");
+errcity.innerHTML="City not be empty";	
+}
+else
+{
+document.getElementById("a").value+="\n City:"+City.value
+}
+var Address=document.getElementById("add");
+var erradd=document.getElementById("erradd");
+erradd.innerHTML="";
+if(Address.value=="")
+{
+//alert("Address not be empty");
+erradd.innerHTML="Address not be empty";	
+}
+else
+{
+document.getElementById("a").value+="\n Address:"+Address.value
+}
+var Email=document.getElementById("email");
+var errmail=document.getElementById("errmail");
+errmail.innerHTML="";
+if(Email.value=="")
+{
+	//alert("Email not be empty");
+errmail.innerHTML="Email not be empty";	
+}
+else
+{
+document.getElementById("a").value+="\n Email:"+Email.value;
+}
+var drop=document.getElementById("s");
+document.getElementById("a").value+="\n How did you get to this site:"+drop.value;
+
+}*/
+</script>
+</head>
+<body>
+<form name="myform" onsubmit="return validateForm()"id="fid" >
+<table>
+<tr><td>Name </td><td><input type="text" name="txtName"></td></tr>
+<tr><td>Address </td><td>  <input type="text" name="add"></td></tr>
+<tr><td>City  </td><td> <input type="text" name="city"></td></tr>
+<tr><td>Email  </td><td> <input type="text" name="email"></td></tr>
+<tr><td>why do you want to learn JavaScript? </td></tr>
+<tr><td><input type="radio" name="r" value="Duno">Duno</td></tr>
+<tr><td><input type="radio" name="r" value="Because my boss told me to">Because my boss told me to</td></tr>
+<tr><td><input type="radio" name="r" value="Generally interested ">Generally interested </td></tr>
+<tr><td><input type="radio" name="r" value="It might come in useful">It might come in useful</td></tr>
+<tr><td>How did you get to this site? </td>
+<td>
+<select id="s">
+ <option value="..select.."></option>
+ <option value="..select..">..select..</option>
+  <option value="Social Sites">Social Sites</option>
+</select>
+ </td></tr><br>
+<tr><td>I'd like additional information about </td></tr>
+<tr><td><input type="checkbox" /> oranges</td></tr>
+<tr><td><input type="checkbox" /> potatoes</td></tr>
+<tr><td><input type="checkbox" /> tomatoes</td></tr>
+<tr><td><input type="checkbox" /> blue whales</td></tr>
+</table>
+<input type="submit" value="Submit"><br>
+<button type="reset" value="Reset">Reset</button><br><br>
+<textarea rows="4" cols="50"id="a">
+</textarea>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
